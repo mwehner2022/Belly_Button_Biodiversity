@@ -37,4 +37,6 @@ See the images below as references:
 
 ![website](website.png)
 
+![about](about.png)
+
 ![bubble](bubble.png)
