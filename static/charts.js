@@ -3,7 +3,7 @@ function init() {
   var selector = d3.select("#selDataset");
 
   // Use the list of sample names to populate the select options
-  d3.json("samples.json").then((data) => {
+  d3.json("static/samples.json").then((data) => {
     var sampleNames = data.names;
 
     sampleNames.forEach((sample) => {
@@ -32,7 +32,7 @@ function optionChanged(newSample) {
 
 // Demographics Panel 
 function buildMetadata(sample) {
-  d3.json("samples.json").then((data) => {
+  d3.json("static/samples.json").then((data) => {
     var metadata = data.metadata;
     // Filter the data for the object with the desired sample number
     var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
