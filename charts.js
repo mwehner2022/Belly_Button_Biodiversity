@@ -140,7 +140,8 @@ function buildCharts(sample) {
       text: otuLabels,
       mode:'markers',
       marker: {
-        color: otuIDs.map(id => numberToColour(id*1000)),
+        color: otuIDs,
+        colorscale: "Earth",
         size: otuSampleValues
       }
    }];
@@ -195,12 +196,4 @@ function buildCharts(sample) {
 
 
   });
-};
-
-function numberToColour(number) {
-  const r = (number & 0xff0000) >> 16;
-  const g = (number & 0x00ff00) >> 8;
-  const b = (number & 0x0000ff);
-  
-  return 'rgb('+r+', '+g+', '+b+')';
 };
